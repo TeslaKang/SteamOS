@@ -1,2 +1,2 @@
 # SteamOS
-This explains how to create your own Steam OS.
+This explains how to create my own Steam OS.
