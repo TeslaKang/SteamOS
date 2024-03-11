@@ -19,10 +19,10 @@ Secure space for installation in Windows.<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/823182bc-fc7f-4df3-890c-7daa0e65932c"><br>
 <br>
 After connecting the Linux installation USB to the PC, use the Del key or F2 key (different for each device) to enter BIOS and select the installation USB.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/c9fd89b3-2e51-49a9-91d0-371437daaac3)<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/c9fd89b3-2e51-49a9-91d0-371437daaac3"><br>
 <br>
 When you boot, you will see the Manjaro Linux installation screen as shown below.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/ccb98b8f-8ae3-49fe-9f65-62664418ee12)
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/ccb98b8f-8ae3-49fe-9f65-62664418ee12"><br>
 Run <b>Install Manjaro Linux</b> to start the installer<br>
 <br>
 When installing, be sure to set the language to English.<br>
@@ -32,7 +32,7 @@ Select region, then select keyboard.<br>
 <br>
 Now comes the most important part: deciding where to install it.<br>
 If you make a mistake here, the existing Windows may be destroyed, so be careful.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/4d850f43-fe3d-40e6-b448-db16d400837a">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/4d850f43-fe3d-40e6-b448-db16d400837a"><br>
 Select the disk to install from number 1.<br>
 If you want to install by reducing the size of the existing partition without dividing the partition, select “Install alongside” from number 2, select the partition you want to install, and then adjust the size.<br>
 If you previously secured a partition to install on, just select “Replace a partition” in number 3 and then select the partition you want to install on.<br>
@@ -43,35 +43,35 @@ Additionally, it is recommended that the file system be EXT4.<br>
 In the case of BTRFS, the file system is often damaged during use, and even the slightest damage makes it unrecoverable.<br>
 <br>
 Set up a user account.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/f19e7b88-f434-4592-9bd1-3c25bbd7c676">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/f19e7b88-f434-4592-9bd1-3c25bbd7c676"><br>
 The name must be <b>deck</b>.<br>
 Please enter your password appropriately.<br>
 And be sure to uncheck “<b>Log in automatically without asking for the passwd</b>”.<br>
 If you choose that, you will run into some problems because the files that handle that option are different during installation and when configuring KDE.<br>
 <br>
 It briefly shows the information to be installed.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/26412fa5-a207-4e34-a92d-f42a049cc023">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/26412fa5-a207-4e34-a92d-f42a049cc023"><br>
 When you're ready, click <b>Install</b> to begin installation.<br>
 <br>
 manjaro asking again.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9acf4bf2-cf51-47f1-9e43-9f98f1379cbc">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9acf4bf2-cf51-47f1-9e43-9f98f1379cbc"><br>
 Click <b>Install now</b><br>
 <br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e9b3e6f5-e19b-49a6-b750-265fd12ecb22">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e9b3e6f5-e19b-49a6-b750-265fd12ecb22"><br>
 Installation takes approximately 5-10 minutes.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/82dc483c-b191-4595-a19b-4d0097b36ba1">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/82dc483c-b191-4595-a19b-4d0097b36ba1"><br>
 When finished, reboot.<br>
 <br>
 After re-entering BIOS...<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/19a7c4c3-40ce-48e0-b0bd-a05a8a2dfa59)
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/19a7c4c3-40ce-48e0-b0bd-a05a8a2dfa59"><br>
 Select Manjaro Linux and boot.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/a76844da-2ac0-45d2-8ecc-f99486b1b12a">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/a76844da-2ac0-45d2-8ecc-f99486b1b12a"><br>
 <br>
 When you enter the password you set during installation, Manjaro Linux will welcome you.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/ecd9a0ed-63fb-47eb-a2fa-366c9ef6b307">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/ecd9a0ed-63fb-47eb-a2fa-366c9ef6b307"><br>
 <br>
 The basic installation is now complete.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/6cbddaf0-9d5d-42f0-8495-668f0ef45f77">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/6cbddaf0-9d5d-42f0-8495-668f0ef45f77"><br>
 <br>
 <br>
 # Configure Linux
@@ -82,24 +82,24 @@ Run System Settings.<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/538bdc03-fe25-43f9-b0d8-b120f70b6d78"><br>
 <br>
 Select Startup and Shutdown...<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9ca832bc-e375-4235-baf8-b4d3f0e6856a">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9ca832bc-e375-4235-baf8-b4d3f0e6856a"><br>
 Select Behavior.<br>
 <br>
 Set the deck to automatically log in.<br>
 Then select Open KDE Wallet Setting.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b2b6ffed-6386-4956-938f-fbb2191a670c">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b2b6ffed-6386-4956-938f-fbb2191a670c"><br>
 <br>
 Select Change Password, enter nothing for the password and press Ok.<br>
 If you set a password here, you will be repeatedly asked for the password later.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/24ba1c92-4c62-4e59-a1e6-249fcf8147c7">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/24ba1c92-4c62-4e59-a1e6-249fcf8147c7"><br>
 <br>
 When you click Apply, you will be asked for a password. Enter the password you entered during installation.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/7afb6795-e766-4b10-8c3e-c9c2fe9838ca">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/7afb6795-e766-4b10-8c3e-c9c2fe9838ca"><br>
 <br>
 Click on the DOS window at the bottom to run konsole.<br>
 Linux starts and ends with the console, so you should always be familiar with the console.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e1d39457-4d46-4336-8e7d-6fbc5874379a">
-If you are a Korean/Chinese/Japanese user, install the font by sudo <b>pacman -S noto-fonts-cjk</b>b>.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e1d39457-4d46-4336-8e7d-6fbc5874379a"><br>
+If you are a Korean/Chinese/Japanese user, install the font by sudo <b>pacman -S noto-fonts-cjk</b>.<br>
 When you first run the command, a warning (?) is displayed. Just ignore it and enter the password you entered during installation.<br>
 Please note that the password input is not visible, so do not assume that it cannot be entered.<br>
 <br>
@@ -107,71 +107,71 @@ An error occurs saying that the package information has not been updated.<br>
 Type <b>sudo pacman -Sy</b> as described above.<br>
 When it's all over...<br>
 Type <b>sudo pacman -S noto-fonts-cjk</b> again.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/d7d8606c-4cef-42fe-b61b-63ebe314a1e8">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/d7d8606c-4cef-42fe-b61b-63ebe314a1e8"><br>
 <br>
 This time... trying to update the Linux key.<br>
 Press Y or just Enter.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/f55e565f-313c-4677-b7ef-112bf9207174">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/f55e565f-313c-4677-b7ef-112bf9207174"><br>
 Now install the font.<br>
 Just press Y or Enter.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/58d66254-6bb0-430d-a6cf-148e7b755fde">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/58d66254-6bb0-430d-a6cf-148e7b755fde"><br>
 <br>
 Now let's install discover.<br>
 (Manjaro has its own package installer, but Steam OS and KDE mainly use discover.)<br>
 In the console, run <b>sudo pacman -S discover</b>.
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/a05fd278-cabf-4403-be75-c143be82d7a3">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/a05fd278-cabf-4403-be75-c143be82d7a3"><br>
 <br>
 If you go to Start -> System, you will see Discover.<br>
 To commemorate the installation(?), let's run it.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/de462abb-ef33-4286-9ed6-909159c4d87b">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/de462abb-ef33-4286-9ed6-909159c4d87b"><br>
 It runs well.<br>
 For reference, if you right-click on the taskbar and select Pin to Task Manager, an icon will appear on the taskbar for convenient use later.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/654c36a9-5afa-45ad-8015-d0742458b502">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/654c36a9-5afa-45ad-8015-d0742458b502"><br>
 <br>
 Come back to the konsole...<br>
 <b>sudo pacman -S cpupower ark bc onboard gcc jq</b> to install.<br>
 <b>cpupower</b> is a program that can set up the CPU, and <b>ark</b> is a program that processes compressed files.<br>
 <b>bc</b> is a program that allows calculation(?) on the command line, and <b>onboard</b> is an on-screen (touch) keyboard.<br>
 <b>gcc</b> is a compiler, and <b>jq</b> is a program needed to install decky-loader, which will be installed later.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/23567940-4f03-40d8-8bed-070e75a48b86">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/23567940-4f03-40d8-8bed-070e75a48b86"><br>
 <br>
 Now let's try updating the entire system.<br>
 Just type <b>sudo pacman -Syu</b>.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/dc97f54f-9947-46b4-ae7c-30756d035636">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/dc97f54f-9947-46b4-ae7c-30756d035636"><br>
 They seem to be installing quite a lot...<br>
 Just press y or enter to start installation.<br>
 After installation is complete, reboot and you will have the latest version of Linux.<br>
 <br>
 When the screen lock is enabled on a UMPC without a keyboard, it is difficult to enter the password...<br>
 Try unlocking the screen.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/2c621791-1eb2-4066-885c-1a062e1a3e2d">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/2c621791-1eb2-4066-885c-1a062e1a3e2d"><br>
 Launch Settings and select Workspace Behaviors.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/0cb7dd32-84cc-4823-b20b-631f40a49c8c">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/0cb7dd32-84cc-4823-b20b-631f40a49c8c"><br>
 Unlock as above.<br>
 <br>
 Now try turning off Search (if it's on, it can find things in the background and use a lot of CPU).<br>
 If you disable it, a warning is displayed.<br>
 Just ignore it and click Apply.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/08085e49-c45a-4923-9a46-7e175273d560">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/08085e49-c45a-4923-9a46-7e175273d560"><br>
 <br>
 Now let's install Chrome.<br>
 Personally, I think Chrome is better than Firefox, which is installed by default.<br>
 (People using Firefox can skip this.)<br>
 Chrome will be installed through flapak, so install it with <b>sudo pacman -S flatpak</b> in the konsole.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/2f59b69c-3285-484a-a215-c501749a3f58">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/2f59b69c-3285-484a-a215-c501749a3f58"><br>
 <br>
 Now run Discover and type chrome to search for Chrome.<br>
 Just click install.<br>​
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/70351618-70ee-45a9-975d-bfc6dea945db">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/70351618-70ee-45a9-975d-bfc6dea945db"><br>
 <br>
 If Chrome does not appear, it may be because the flatpak settings are incorrect.<br>
 Click on Discover's settings, add dl.flathub.org to the flatpak address, and try again.Click on Discover's settings, add dl.flathub.org to the flatpak address, and try again.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b2963a31-fc6c-4fe0-8e36-fbe0cc78a67d">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b2963a31-fc6c-4fe0-8e36-fbe0cc78a67d"><br>
 Just find Chrome in the Start menu and run it.<br>
 Please note that if it is not on startup, it will appear after rebooting.<br>
 <br>
 Try deleting “Welcome to Manjaro” that appears when you run Manjaro Linux.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/c45a8a1b-6782-4145-9414-c85cc91b7060">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/c45a8a1b-6782-4145-9414-c85cc91b7060"><br>
 You can remove it by running <b>sudo pacman -R manjaro-hello</b>.<br>
 <br>
 Also, since you installed Chrome, you don't need firefox either.<br>
@@ -179,16 +179,16 @@ You can delete it with <b>sudo pacman -R firefox</b>.<br>
 <br>
 When you enter the sudo command, you will be asked for your password.<br>
 If this bothers you, you can disable it using the method below.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/d537454b-15c5-46ab-86ce-fb187bb3d94b">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/d537454b-15c5-46ab-86ce-fb187bb3d94b"><br>
 In the konsole, type <b>kate /etc/sudoers.d/deck</b>.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/01047480-3f68-4cba-b608-93ebf1506da1">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/01047480-3f68-4cba-b608-93ebf1506da1"><br>
 deck ALL=(root) NOPASSWD:ALL<br>
 Just enter , click Save, and enter your password.<br>
 Now, when you run sudo commands in the console, you will no longer be asked for an annoying password.<br>
 <br>
 The basic settings are now complete.<br>
 <br>
-# Install gamescope-session
+# Dual booting made easy
 <br>
 
 
