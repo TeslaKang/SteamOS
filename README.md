@@ -182,6 +182,7 @@ When you enter the sudo command, you will be asked for your password<br>
 If this bothers you, you can disable it using the method below<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/d537454b-15c5-46ab-86ce-fb187bb3d94b"><br>
 In the konsole, type <b>kate /etc/sudoers.d/deck</b><br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/01047480-3f68-4cba-b608-93ebf1506da1"><br>
 deck ALL=(root) NOPASSWD:ALL<br>
 Just enter , click Save, and enter your password<br>
@@ -224,6 +225,7 @@ When you run the GameAssist, a rEFind tab that wasn't there before will appear<b
 Modifying the bootloader may make your device unbootable<br>
 In other words, you must pay enough attention<br>
 However, the boot loader can be restored very easily, so if you have basic knowledge, there will be no major difficulties<br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/4ea111a0-f89f-48ae-8132-1f058007eca3"><br>
 First select the EFI partition<br>
 In most cases, there will be only one partition, so it will be selected automatically<br>
@@ -267,7 +269,9 @@ If you go into the BIOS and look at the boot item settings, you will see rEFInd 
 Select this<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9a2814f7-0cbf-441a-8105-189af244fb36"><br>
 <br>
-Now, when you reboot... you will see an item where you can select Windows and Linux<br>
+Now, when you reboot...<br>
+<br>
+you will see an item where you can select Windows and Linux<br>
 (Unlike other loaders, you can select with the gamepad. For reference, the A key is selected.)<br>
 Try booting into Linux<br>
 If it doesn't work, reboot into Windows and correct the Refind item in the GameAssist<br>
@@ -281,9 +285,12 @@ Type <b>kate /etc/fstab</b>.
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/96280cf1-4d48-4f69-9759-90c5fe8e5ef6"><br>
 If /boot/efi's permissions are set to 0077, it cannot be opened<br>
 So change to defaults<br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/3b8823d5-13ec-49a7-bff8-b9ebcba842d3"><br>
 Please note that whenever you modify a system-related file, you will be asked for a password<br>
+<br>
 Try rebooting<br>
+<br>
 Run the konsole again<br>
 Run <b>kate /boot/efi/EFI/refind/game_assist.conf</b><br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/6d650cb4-c332-4f24-8c3c-8da14e1f09a1"><br>
@@ -302,25 +309,61 @@ Type sudo <b>pacman -S steam gamescope-plus mangohud glfw-x11</b><br>
 Once installation is complete, Steam will be registered<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/21a83a53-32cc-4ea9-a7c3-4fea29480414"><br>
 Launch Steam<br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/850c76bf-c239-4cb6-8ca9-6cc1027b6f77"><br>
 Working hard on downloading~~<br>
 Let sit until done<br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b9e059a7-37c2-4a54-b176-fa3dd31a9001"><br>
 If it comes out like this, it is a success<br>
-<br>
 Press X to exit<br>
 <br>
 Now you just need to install the actual Steam OS.<br>
 After moving to the Documents folder(by cd ~/Documents) in the konsole.<br>
 Enter <b>git clone https://github.com/TeslaKang/gamescope-session.git</b>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/7b41b042-17d3-44cd-a0f3-1c76a218c479"><br>
+<br>
 Check the contents with <b>ls -l</b><br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/7f1a5e96-0b0f-4e97-8334-39a00fff40cb"><br>
 Install with <b>./install</b><br>
 It's easy to install.<br>
+<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/1cfb2c90-fb6d-48a9-af0a-51624f73d63b"><br>
 If you look at your desktop, you'll see a Steam icon and an icon for Game Mode<br>
 When you run Return to Gaming mode, you will be taken to Steam OS<br>
+<br>
+If you don't go into game mode, it's because auto login is set to Plasma<br>
+After executing kate /etc/sddm.conf in konsole<br>
+Just delete all contents of [Autologin]<br>
+If you select automatic login during installation or set automatic login in the environment settings, the value will be registered and you will not be able to switch to game mode<br>
+<br>
+Now run Return to Gaming mode and check if it works properly<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9a65df36-4542-406a-b5e2-2a9bca55b580"><br>
+<br>
+Enter the language/time zone/account to enter Steam OS<br>
+Now it is the same as Steam Deck, so you can use it like Steam Deck<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/cc29061c-721c-4718-8604-899f3684df48"><br>
+<br>
+Try changing the desktop start icon to Steam Deck<br>
+Press Menu, select Power, and then select Desktop to switch to the desktop<br>
+Right-click on the Start icon and select "Configure Application Launcher..."<br>
+Click the icon and select “Choose”<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/1cb54fef-e0e3-41c0-bfba-19a6aa8285e2"><br>
+<br>
+There are so many icons that it is difficult to find them, so type "dis" and select the Steam Deck start icon<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/c689a194-9800-40a8-9576-d24042c5fb30"><br>
+<br>
+Changed to Steam Deck start icon<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/0b9d58a8-5b40-478b-b4e7-7c6d7b5aee96"><br>
+Now my device is a Steam Deck.<br>
+<br>
+Just use it diligently.<br>
+<br>
+​
+
+
+
 
 
 
