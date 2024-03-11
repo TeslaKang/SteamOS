@@ -1,7 +1,10 @@
 # SteamOS
 This explains how to create my own Steam OS.<br>
 <br>
-Install arch linux + KDE DE.(We recommand using manjaro minimal version)<br>
+<br>
+# Install Linux
+<br>
+Install Arch linux + KDE DE.(We recommand using manjaro minimal version)<br>
 https://manjaro.org/download/<br>
 ![image](https://github.com/TeslaKang/SteamOS/assets/82138730/8c5d76ac-5934-4f6c-be45-860dfef43488)
 ![image](https://github.com/TeslaKang/SteamOS/assets/82138730/b88a1e41-42bb-4232-b3e8-e8f889bda780)<br>
@@ -69,7 +72,19 @@ When you enter the password you set during installation, Manjaro Linux will welc
 <br>
 The basic installation is now complete.<br>
 ![image](https://github.com/TeslaKang/SteamOS/assets/82138730/6cbddaf0-9d5d-42f0-8495-668f0ef45f77)
-
+<br>
+<br>
+# Configure Linux
+<br>
+Linux is now installed.<br>
+Before installing Steam OS, you need to set up some basic settings.<br>
+Run System Settings.<br>
+![image](https://github.com/TeslaKang/SteamOS/assets/82138730/538bdc03-fe25-43f9-b0d8-b120f70b6d78)<br>
+<br>
+Select Startup and Shutdown...<br>
+![image](https://github.com/TeslaKang/SteamOS/assets/82138730/9ca832bc-e375-4235-baf8-b4d3f0e6856a)
+Select Behavior.<br>
+<br>
 
 
 
