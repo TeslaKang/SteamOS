@@ -1,4 +1,4 @@
-![image](https://github.com/TeslaKang/SteamOS/assets/82138730/8b244084-d851-4038-bfc5-c4a3115c8dfe)# SteamOS
+# SteamOS
 This explains how to create my own Steam OS.<br>
 <br>
 <br>
