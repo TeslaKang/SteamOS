@@ -1,4 +1,4 @@
-# SteamOS
+![image](https://github.com/TeslaKang/SteamOS/assets/82138730/8b244084-d851-4038-bfc5-c4a3115c8dfe)# SteamOS
 This explains how to create my own Steam OS.<br>
 <br>
 <br>
@@ -123,10 +123,10 @@ In the console, run <b>sudo pacman -S discover</b>.
 <br>
 If you go to Start -> System, you will see Discover.<br>
 To commemorate the installation(?), let's run it.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b4ab8d84-2247-4c31-8caa-b6a1f50ac0d8">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/de462abb-ef33-4286-9ed6-909159c4d87b">
 It runs well.<br>
 For reference, if you right-click on the taskbar and select Pin to Task Manager, an icon will appear on the taskbar for convenient use later.<br>
-<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/47cff60d-7034-4572-ad5c-62750ba04765)">
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/654c36a9-5afa-45ad-8015-d0742458b502">
 <br>
 Come back to the konsole...<br>
 <b>sudo pacman -S cpupower ark bc onboard gcc jq</b> to install.<br>
@@ -142,5 +142,56 @@ They seem to be installing quite a lot...<br>
 Just press y or enter to start installation.<br>
 After installation is complete, reboot and you will have the latest version of Linux.<br>
 <br>
+When the screen lock is enabled on a UMPC without a keyboard, it is difficult to enter the password...<br>
+Try unlocking the screen.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/2c621791-1eb2-4066-885c-1a062e1a3e2d">
+Launch Settings and select Workspace Behaviors.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/0cb7dd32-84cc-4823-b20b-631f40a49c8c">
+Unlock as above.<br>
+<br>
+Now try turning off Search (if it's on, it can find things in the background and use a lot of CPU).<br>
+If you disable it, a warning is displayed.<br>
+Just ignore it and click Apply.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/08085e49-c45a-4923-9a46-7e175273d560">
+<br>
+Now let's install Chrome.<br>
+Personally, I think Chrome is better than Firefox, which is installed by default.<br>
+(People using Firefox can skip this.)<br>
+Chrome will be installed through flapak, so install it with <b>sudo pacman -S flatpak</b> in the konsole.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/2f59b69c-3285-484a-a215-c501749a3f58">
+<br>
+Now run Discover and type chrome to search for Chrome.<br>
+Just click install.<br>​
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/70351618-70ee-45a9-975d-bfc6dea945db">
+<br>
+If Chrome does not appear, it may be because the flatpak settings are incorrect.<br>
+Click on Discover's settings, add dl.flathub.org to the flatpak address, and try again.Click on Discover's settings, add dl.flathub.org to the flatpak address, and try again.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b2963a31-fc6c-4fe0-8e36-fbe0cc78a67d">
+Just find Chrome in the Start menu and run it.<br>
+Please note that if it is not on startup, it will appear after rebooting.<br>
+<br>
+Try deleting “Welcome to Manjaro” that appears when you run Manjaro Linux.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/c45a8a1b-6782-4145-9414-c85cc91b7060">
+You can remove it by running <b>sudo pacman -R manjaro-hello</b>.<br>
+<br>
+Also, since you installed Chrome, you don't need firefox either.<br>
+You can delete it with <b>sudo pacman -R firefox</b>.<br>
+<br>
+When you enter the sudo command, you will be asked for your password.<br>
+If this bothers you, you can disable it using the method below.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/d537454b-15c5-46ab-86ce-fb187bb3d94b">
+In the konsole, type <b>kate /etc/sudoers.d/deck</b>.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/01047480-3f68-4cba-b608-93ebf1506da1">
+deck ALL=(root) NOPASSWD:ALL<br>
+Just enter , click Save, and enter your password.<br>
+Now, when you run sudo commands in the console, you will no longer be asked for an annoying password.<br>
+<br>
+The basic settings are now complete.<br>
+<br>
+# Install gamescope-session
+<br>
+
+
+
 
 
