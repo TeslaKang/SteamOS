@@ -2,6 +2,7 @@
 This explains how to create my own Steam OS.<br>
 <br>
 <br>
+
 # Install Linux
 <br>
 Install Arch linux + KDE DE.(We recommand using manjaro minimal version)<br>
@@ -188,10 +189,33 @@ Now, when you run sudo commands in the console, you will no longer be asked for 
 <br>
 The basic settings are now complete.<br>
 <br>
+
 # Dual booting made easy
 <br>
-
-
-
-
-
+You installed Linux, but if I want to boot into Linux, I have to go into the BIOS and select Linux every time.<br>
+GPD Win 4 or Max 2, which have a keyboard, are fine, but for devices without a keyboard, you can only select the OS when the keyboard is connected through a USB hub.<br>
+So let's try to solve it.<br>
+Run the konsole.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/6e3b6fee-fbc5-40d8-97c0-6a8b6f6808da"><br>
+Go to the folder containing the kernel with <b>cd /boot</b>.<br>
+Check which files exist with <b>ls -l</b>.<br>
+The important files here are the kernel file starting with <b>vmlinux</b> and the initial RAM disk file starting with <b>initramfs</b>.<br>
+In the case of Manjaro Linux, the version number is attached to the kernel.<br>
+In my case...<br>
+linux 6.6 is vmlinuz-6.6-x86_64 / initramfs-6.6-x86_64.img<br>
+linux 6.7 is vmlinuz-6.7-x86_64 / initramfs-6.7-x86_64.img<br>
+<br>
+Run <b>sudo cat grub/grub.cfg</b>.
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/dfc03e3b-671f-4e2f-beb4-62a1f465f654"><br>
+A lot of content is printed...<br>
+If you move up with the mouse wheel...<br>
+You can see the file name in the /boot directory registered there.<br>
+The important ones there are "/boot/vmlinuz-6.6-x86_64", "root=UUID=3b86ac23-ef58-4c54-b841-02d595eba78b", "/boot/initramfs-6.6-x86_64.img".<br>
+Also remember the UUID of the root volume, "a25f8b7d-c15a-4d9f-9d6a-4b6c98a4ecac".<br>
+Please note that UUID is a unique value given during installation, so they all have different values.<br>
+Write down the three contents above in a notepad.<br>
+​<br>
+<br>
+The work on Linux is now complete.<br>
+<br>
+Boot into Windows.<br>
