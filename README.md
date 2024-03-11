@@ -219,3 +219,62 @@ Write down the three contents above in a notepad.<br>
 The work on Linux is now complete.<br>
 <br>
 Boot into Windows.<br>
+Download <a href="https://github.com/TeslaKang/SteamOS/raw/main/GameAssist.7z">GameAssist</a><br>
+When you run the AameAssist, a rEFind tab that wasn't there before will appear.<br>
+Modifying the bootloader may make your device unbootable.<br>
+In other words, you must pay enough attention.<br>
+However, the boot loader can be restored very easily, so if you have basic knowledge, there will be no major difficulties.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/4ea111a0-f89f-48ae-8132-1f058007eca3"><br>
+First select the EFI partition.<br>
+In most cases, there will be only one partition, so it will be selected automatically.<br>
+Then click Refind Install to install.<br>
+Refind will now be registered as a bootable item and you will be able to select it in BIOS.<br>
+<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/a3279152-9a2a-4e6e-b753-57e877200cda"><br>
+A gamepad driver is also installed so that it can be operated with a gamepad instead of keys. If necessary, ext2/3 drivers and ntfs drivers can also be installed.<br>
+If you are not sure, you can leave it as default.<br>
+Since most UMPCs have vertical LCDs, select the rotation portion appropriately and set it so that the OS selection screen appears correctly.<br>
+If the screen is abnormal when booting, you can modify the resolution.<br>
+The resolutions of 0, 1, 2, and 3 are different for each device, so you can set them after testing.<br>​
+<br>
+The OS item detects the system and automatically creates Windows and Linux related items.<br>
+For Windows, there is no need to configure anything differently, but for Linux, you need to enter the previous information to operate properly.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/71e54a7f-d47f-4d67-ba53-9153cf60f2cf"><br>
+The <b>volume</b> part is the file system delimiter where the kernel file is located.<br>
+If you have only one Linux installed on your system, you can enter information such as the kernel name, loader.<br>
+Write a name starting with vmlinuz in /boot.<br>
+If you have installed more than one Linux, if the kernel name is the same, the correct file system cannot be found, so in that case, just write down the name or uuid of the partition.<br>
+In my case, since I have 4 Linux installed on my system, I decided to use UUID.<br>
+<b>loader</b> is where the kernel is located.<br>
+Just enter the same information as in the volume section.<br>
+<b>initrd</b> is the location of the initial ramdisk file.<br>
+Just enter the file name starting with initramfs.<br>
+<b>options</b> are options given to the kernel. Here, only root is required, others are optional.<br>
+The GameAssist is created with the following contents.<br>
+You can just roughly fix it there.<br>
+options "root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw rd.udev.log_priority=3 vt.global_cursor_default=0 fbcon=rotate:0"<br>
+In my case...<br>
+    options "root=UUID=3b86ac23-ef58-4c54-b841-02d595eba78b rw rd.udev.log_priority=3 vt.global_cursor_default=0 iomem=relaxed fbcon=rotate:0"<br>
+    graphics on<br>
+fbcon=rotate:0 is the rotation direction of the kernel message when booting.<br>
+It is not very important, but if it is a vertical screen, it is good to correct it by inserting numbers such as 1, 2, and 3.<br>
+Additionally, “iomem=relaxed amd_pstate=disable” was added.<br>
+It's not that important, but I added it because there are some functions that won't work without that option.<br>
+Also added "initrd=/boot/amd-ucode.img".<br>
+It is not required, but is a patch file related to CPU security updates.<br>
+Now reboot.<br>
+If you go into the BIOS and look at the boot item settings, you will see rEFInd for GameAssist, which was not visible.<br>
+Select this.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9a2814f7-0cbf-441a-8105-189af244fb36"><br>
+<br>
+Now, when you reboot... you will see an item where you can select Windows and Linux.<br>
+(Unlike other loaders, you can select with the gamepad. For reference, the A key is selected.)<br>
+Try booting into Linux.<br>
+If it doesn't work, reboot into Windows and correct the Refind item in the GameAssist.<br>
+If you want to boot into Linux without going through Refind, select Manjaro in the BIOS and it will boot as before.<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e1188427-f319-460e-b5d9-25a453c26053"><br>
+<br>
+Now, let's set up the refind configuration file in Linux so that you can easily edit it.<br>
+Run the konsole.<br>
+<br>
+
