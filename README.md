@@ -360,7 +360,108 @@ Now my device is a Steam Deck.<br>
 <br>
 Just use it diligently.<br>
 <br>
-​
+
+# Make custom key/power key work
+<br>
+​The Steam OS is now installed<br>
+However, the UMPC custom key or power key does not work, making actual use a bit difficult<br>
+Let's solve this<br>
+Expert have already created a solution, so all you have to do is install it<br>
+<br>
+The related program is <b>HandyGCCS</b><br>
+However, after using HandyGCCS for a few months, it is fine for regular use, but when using it in hibernation mode, there is an issue where the controller stops working after hibernating 10-20 times<br>
+Also, it cannot handle cover events from devices with covers like GPD Win Max2 or GPD Win Mini<br>
+A thirsty person digs a well, so I created something called HandyGCCS++<br>
+The basic HandyGCCS source is in Python, and each function is made into a module, making it difficult to manage, so I made it into just one file in C++<br>
+After using it for about a month, there seemed to be no major problems, so we recommend that future users use HandyGCCS++<br>
+<br>
+First, go to https://github.com/TeslaKang/HandyGCCS and take a look<br>
+If the device is not there, it is difficult to actually use it, so you can either wait for it to be added or download HandyGCCS++ and add it yourself<br>
+<br>
+First, launch the konsole<br>
+Type cd Documents to move to the documents folder(It is convenient to use the tab key after entering only one or two characters, so get used to using the tab key~~)<br>
+<b>git clone https://github.com/TeslaKang/HandyGCCS.git</b><br>
+Type <b>cd HandyGCCS</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/27514a65-f311-49a6-93a0-6fe2960f8a02"><br>
+<br>
+Launch <b>./stop.sh</b> to stop previously running services<br>
+For install <b>sudo ./install.sh</b><br>
+For launch <b>sudo ./start.sh</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/56a5d0d4-04c4-41ef-8654-990203fe0e2c"><br>
+<br>
+To know if it's currently running well<br>
+You can find out by running <b>./log.sh</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/1c70b101-5dfa-4dde-9286-fb938dc44c49"><br>
+<br>
+If you want to change the settings for the key<br>
+After stopping the service with <b>./stop.sh</b><br>
+<b>kate /etc/handygccs/handygccs.conf</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/5a83db7e-1e22-4503-ad2e-826ae467109d"><br>
+Just restart the service with <b>./start.sh</b><br>
+
+# Install GameAssist for Steam OS
+<br>
+Although Steam itself has a TDP or GPU clock setting function, it is tailored to the Steam deck, so it is lacking in other high-end UMPCs<br>
+Let's solve this using the Game Assistant for Steam OS<br>
+GameAssist for Steam OS was implemented through decky-loader<br>
+So, you need to install decky-loader first<br>
+First, go to <b>https://github.com/SteamDeckHomebrew/decky-loader</b> and take a look<br>
+Installation is <b>"curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh​"</b><br>
+Now run the konsole<br>
+In the konsole, type <b>"curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh"</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/ef70c5fa-d5fc-463e-959b-06dd0c52b701"><br>
+Ugh... I can't install it because I don't have JQ<br>
+Try installing JQ<br>
+Enter <b>sudo pacman -S jq to install JQ</b><br>
+<br>
+If JQ installation is successful, enter the decky loader installation command<br>
+For reference, you can use the previous command by pressing the up arrow key<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9800479e-5bec-48d7-a54b-efe97e16d80d"><br>
+It takes a little time, but it installs well<br>
+<br>
+Now let's install GameAssist<br>
+In the konsole, navigate to the Documents folder with <b>cd ~/Documents</b><br>
+<b>git clone https://github.com/TeslaKang/GameAssistSteamOS</b><br>
+Go to the folder with <b>cd GameAssistSteamOS</b><br>
+Check the contents with <b>ls -l</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/ae37c8cb-c740-4693-8e1b-b3b93f6cc418"><br>
+It should come out like above<br>
+Just enter <b>./depoly.sh</b> to install<br>
+​<br>
+Now select “Return to Gaming mode” on the desktop to switch to gaming mode<br>
+<br>
+If you look at the QAM menu (if you don't have the QAM key, press Menu(Guide) + A), there is a plug icon that wasn't there before<br>
+If you click on it, you will see GameAssist<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/67988840-8b87-461c-98be-c0c3eb36db31"><br>
+<br>
+Select Setting/Manager Items<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/67a59736-dc9e-4859-b7b2-934265c794d8"><br>
+<br>
+Please note that each item in the game assistant can be edited/added/deleted by the user<br>
+In other words, you can configure it and use it as you wish<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e8eb9132-a169-45d0-971c-a91c98be40b4"><br>
+<br>
+In the case of AyaNeo Air, if you want to make the TDP a little finer<br>
+Go to Item Management, select CPU Package Power, and then select Edit<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/4d2f72b5-7256-4611-97db-25cbaf16e4df"><br>
+<br>
+Set the step value to 0.5 and select OK<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/6bf2c6a5-08f6-4372-bbc0-f2de28f53b1d"><br>
+<br>
+Package power can be set in 0.5W increments<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/543d2934-f925-4c1b-9150-9fdc9ea4fec4"><br>
+<br>
+There is also a function to change the settings of HandyGCCS<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/3fec8397-b010-4a09-be06-48b4ae4ff0a4"><br>
+<br>
+GameAssist has tried to include the basic features found in the SteamDeck whenever possible<br>
+However, there may be bugs, and it was my first time using Python or React, the languages ​​used in the decky loader plugin, so there was a lot of trial and error, and there may be many shortcomings<br>
+It would be much better if an expert refined this part later<br>
+<br>
+<b>Please note that GameAssist for Steam OS does not work on Steam Deck.</b>
+<br>
+
+
 
 
 
