@@ -461,14 +461,94 @@ It would be much better if an expert refined this part later<br>
 <b>Please note that GameAssist for Steam OS does not work on Steam Deck.</b>
 <br>
 
-
-
-
-
-
-
-
-
-
-
+# Activating hibernation mode
+<br>
+This is how to enable hibernation in Linux, which is necessary for the ultimate goal of running games between Windows and Steam OS without interruption<br>
+Run the konsole<br>
+Type <b>cd /home</b><br>
+Enter <b>sudo fallocate -l 16G swapfile</b>(16G is your memory size. For users with 32G or more, 32G is too waste, so enter about 22G.)<br>
+<b>sudo chmod 0600 swapfile</b><br>
+<b>sudo mkswap swapfile</b><br>
+<b>sudo swapon swapfile</b><br>
+Type <b>kate /etc/fstab</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/181f00c0-9dd7-4784-91b9-2281b1c86eb6"><br>
+<br>
+<b>/home/swapfile none swap defaults 0 0</b><br>
+Enter the above content at the end of the file and press Save<br>
+Then enter the password<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/83943536-7abf-4c76-a550-d4bc4ae1e005"><br>
+<br>
+Run <b>sudo systemctl edit --full systemd-logind</b><br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/4d892c66-e29a-418d-8b2e-0ab25addb860"><br>
+<br>
+Change the <b>ProtectHome</b> value to <b>read-only</b> about halfway through and press Ctrl+X to save and exit<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/69fb0ddf-deb6-4ef3-8544-729257c3c4f6"><br>
+<br>
+Run <b>kate /etc/mkinitcpio.conf</b> in the console again<br>
+The original HOOKS had a # in front of them<br>
+Remove <b>base</b> and <b>udev</b> and add <b>systemd</b><br>
+That is, it goes like this:<br>
+<b>HOOKS="systemd autodetect modconf block keyboard keymap consolefont plymouth filesystems"</b><br>
+(Previously, it was processed by adding resume, but if you use systemd, resume is no longer needed)<br>
+Save<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/b116371b-1ebe-4b56-b00d-4e5e0d0c1c46"><br>
+<br>
+If you type <b>sudo mkinitcpio -p linux</b> in the konsole and then press the TAB key, the configuration file in the system will be automatically entered<br>
+(In the case of Manjaro Linux, it follows the rules of linux61, linux66, linux67, etc.)<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/9cdef70b-1c19-4c2e-bfef-b91b5941f8bd"><br>
+<br>
+You can see that it is well made as set up.
+<br>
+<b>
+If you use HOOKS="systemd ..." described above and only one Linux is installed on the device<br>
+There is no need to input uuid and offset as described below<br>
+If you use the old method or more than one of Linux, you must enter uuid and offset in the kernel boot command as follows for it to work properly<br>
+</b>
+<i>
+Now it is time to find the uuid and offset of the swap file<br>
+Run <b>sudo findmnt -no UUID -T /home/swapfile</b> in the konsole<br>
+In my case "a25f8b7d-c15a-4d9f-9d6a-4b6c98a4ecac"<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/f99c1a74-efe4-4edb-8da5-38457704bc56"><br>
+<br>
+Run <b>sudo filefrag -v /home/swapfile</b><br>
+Since a lot of content is output, move to the beginning with the mouse wheel and remember the red numbers<br>
+In my case 3055616<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/19be9a7c-0050-4210-b94d-407d4f585396"><br>
+<br>
+Now it is time to register in kernel options<br>
+Run <b>kate /boot/efi/EFI/refind/game_assist.conf</b>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/292b90e5-3bc2-4ffb-a0b6-76417016254a"><br>
+<br>
+In the Refind settings file of the previously registered GameAssis<br>
+Add <b>resume=UUID=xxxxx resume_offset=yyyy</b><br>
+Please note that xxxxx and yyyy vary from person to person</b>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/caaed84a-d22f-4263-a60d-8916f736b888"><br>
+Save it<br>​
+</i>
+<br>
+Reboot<br>
+When you click the Start menu<br>
+Hibernation is now available<br>
+Just test to see if it works<br>
+<img src="https://github.com/TeslaKang/SteamOS/assets/82138730/6a181aec-026a-4e0b-aff0-0e6e6eb017fe"><br>
+<br>
+<br>
+<b>
+There are some things to keep in mind when using hibernation mode<br>
+First, hibernation saves the current state of the OS to the SSD<br>
+So, after another OS accesses the disk saved in hibernation mode and writes files to it, when it wakes up from hibernation mode, the disk is logically broken because it is not aware of any changes to the disk<br>
+In the case of NTFS or EXT4, they are slightly damaged and can be recovered, but BTRFS becomes unrecoverable, so if you use hibernation, you should not use BTRFS<br>
+In other words, if possible, write operations should not be performed in areas used by each other<br>
+However, because MicroSD can be removed midway, it is safe to use in hibernation mode<br>
+In other words, the best way is to share all data through MicroSD if possible<br>
+Linux also has a function to determine whether Windows has exited hibernation mode<br>
+So, Windows goes into hibernation mode first, and when Linux boots, the Windows partition is mounted as read-only and cannot be written to, so it operates safely(?)<br>
+However, if Windows just shuts down and boots into Linux, Linux mounts the Windows partition as writable<br>
+In this state, exit Linux into hibernation mode, boot into Windows, and then exit Windows into hibernation mode again<br>
+When you wake up from hibernation with Linux, Linux cannot determine whether Windows has exited hibernation mode and is writable, so modifying files on the Windows partition will damage the Windows partition<br>
+Therefore, if you use hibernate mode, you should avoid writing to each other between the Windows and Linux partitions if possible<br>
+<i>
+Please be careful!!</i>
+</b>
+<br>
 
