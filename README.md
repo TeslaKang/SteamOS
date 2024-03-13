@@ -326,7 +326,7 @@ Enter <b>git clone https://github.com/TeslaKang/gamescope-session.git</b>
 Check the contents with <b>ls -l</b><br>
 <br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/7f1a5e96-0b0f-4e97-8334-39a00fff40cb"><br>
-Install with <b>./install</b><br>
+Install with <b>./install.sh</b><br>
 It's easy to install.<br>
 <br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/1cfb2c90-fb6d-48a9-af0a-51624f73d63b"><br>
