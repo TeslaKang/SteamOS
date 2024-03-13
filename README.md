@@ -516,7 +516,7 @@ In my case 3055616<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/19be9a7c-0050-4210-b94d-407d4f585396"><br>
 <br>
 Now it is time to register in kernel options<br>
-Run <b>kate /boot/efi/EFI/refind/game_assist.conf</b>
+Run <b>kate /boot/efi/EFI/refind/game_assist.conf</b><br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/292b90e5-3bc2-4ffb-a0b6-76417016254a"><br>
 <br>
 In the Refind settings file of the previously registered GameAssis<br>
