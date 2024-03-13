@@ -437,7 +437,7 @@ If you click on it, you will see GameAssist<br>
 Select Setting/Manager Items<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/67a59736-dc9e-4859-b7b2-934265c794d8"><br>
 <br>
-Please note that each item in the game assistant can be edited/added/deleted by the user<br>
+Please note that each item in the GameAssist can be edited/added/deleted by the user<br>
 In other words, you can configure it and use it as you wish<br>
 <img src="https://github.com/TeslaKang/SteamOS/assets/82138730/e8eb9132-a169-45d0-971c-a91c98be40b4"><br>
 <br>
