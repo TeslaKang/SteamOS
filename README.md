@@ -193,7 +193,7 @@ The basic settings are now complete<br>
 
 # Dual booting made easy
 <br>
-You installed Linux, but if I want to boot into Linux, I have to go into the BIOS and select Linux every time<br>
+You installed Linux, but if you want to boot into Linux, you have to go into the BIOS and select Linux every time<br>
 GPD Win 4 or Max 2, which have a keyboard, are fine, but for devices without a keyboard, you can only select the OS when the keyboard is connected through a USB hub<br>
 So let's try to solve it<br>
 Run the konsole<br>
